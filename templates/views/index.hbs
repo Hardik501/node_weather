@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">        
+    </head>
+    <body>
+        {{>header}}
+        <br>
+        <div style="margin-left: 4rem;margin-top: 155px;">
+        <p>Use this site for getting weather data</p>
+        <form>
+            <input placeholder="Location" id="inp">
+            <button>Search</button>
+            <p id="output" style="font-weight: 600;"></p>
+        </form>
+        </div>
+        {{>footer}}
+        <script src="js/app.js"></script>
+    </body>
+</html>
