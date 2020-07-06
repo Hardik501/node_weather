@@ -2,7 +2,6 @@ const wform = document.querySelector('form');
 const inp = document.getElementById('inp');
 const out = document.getElementById('output');
 wform.addEventListener('submit',(e)=>{
-    //console.log(inp.value)
     e.preventDefault()
     fetch('http://localhost:3000/weather?address='+encodeURIComponent(inp.value)).then((response)=>{
     response.json().then((data)=>{
