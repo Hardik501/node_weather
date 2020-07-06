@@ -10,7 +10,8 @@ const Partials = path.join(__dirname, '../templates/partials')
 
 
 app.use(express.static(PublicDirPath))
-const port =3000
+const port = process.env.PORT || 3000
+
 hbs.registerPartials(Partials)
 //set view engine as hbs
 app.set('view engine','hbs')

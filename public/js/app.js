@@ -3,7 +3,7 @@ const inp = document.getElementById('inp');
 const out = document.getElementById('output');
 wform.addEventListener('submit',(e)=>{
     e.preventDefault()
-    fetch('http://localhost:3000/weather?address='+encodeURIComponent(inp.value)).then((response)=>{
+    fetch('/weather?address='+encodeURIComponent(inp.value)).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             out.innerHTML =data.error;
