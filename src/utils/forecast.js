@@ -6,9 +6,9 @@ const forecast = (woeid, callback) => {
 
     request({ url, json: true }, (error, res) => {
         if (error) {
-            callback('Unable to connect to weather service!', undefined)
+            callback('Unable to connect to weather services!', undefined)
         } else if (res.body.error) {
-            callback('Unable to find location', undefined)
+            callback('Unable to find location you are searching', undefined)
         } else {
             callback(undefined, res.body)
         }
